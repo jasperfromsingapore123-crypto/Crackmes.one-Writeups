@@ -169,13 +169,13 @@ The following command helps us complete the chall
 
 Note: It may be confusing cos we just said we want 65571 args. But, you need to realise we are starting at "1", and hence, it is actually 65571 arguments
 
-
+```text
 jasper@jasper:~/CTF/68eb89c32d267f28f69b7544/chall/todo$ ./chall {1..65572}
 Entry, main
 flag{done}
 Segmentation fault         (core dumped) ./chall {1..65572}
 jasper@jasper:~/CTF/68eb89c32d267f28f69b7544/chall/todo$ 
-
+```
 
 
 Written using GNU NANO
