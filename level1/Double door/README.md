@@ -1,5 +1,10 @@
 Lets open up this file in a decompiler, for me its Binary Ninja
 
+Challenge sourced at:
+https://crackmes.one/crackme/6a9281f948cda5a2aaa3dbf3
+
+Information is accurate as per 4 September 2026
+
 We see a variable named "var_58"
 It is passed into check_password(), which suggests its the user input. We can thus rename var_58 as such. Anyways, lets go reverse engineer check_password()
 
