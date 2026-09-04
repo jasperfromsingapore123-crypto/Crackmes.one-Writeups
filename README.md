@@ -4,6 +4,7 @@ jasperfromsingapore123@gmail.com
 Any comments will be welcomed.
 
 The structure would be:
+```text
 Crackmes.one-Writeups
 	-Chall1
 		-Readme.md
@@ -12,7 +13,7 @@ Crackmes.one-Writeups
 		-Readme.md
 		-Solve.py
 	...
-
+```
 Each folder will usually contain a README.md(for explanations) and a solve.py/solve.cpp(then in this case there may be an executable fileP
 
 Tools used:
