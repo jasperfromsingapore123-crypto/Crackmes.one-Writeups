@@ -1,5 +1,9 @@
 Decompiled using Binary Ninja.
 
+Challenge can be found at:
+https://crackmes.one/crackme/673df8399b533b4c22bd2f1b
+Information is accurate as per 4 September 2026
+
 Alright.. lets open up our file in a decompiler. For me, the main() function is sub_401000()
 
 We are given:
