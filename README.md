@@ -3,16 +3,15 @@ jasperfromsingapore123@gmail.com
 
 Any comments will be welcomed.
 
-The structure woule be
-Crackmes.one-Writeups/ 
-	├── The-Barista-Secret/ │ 
-		├── README.md │ 
-		└── solve.py 
-	├── Challenge-Name/ │ 
-	├── README.md │ 
-	└── solve.py 
-	└── ...
-
+The structure would be:
+Crackmes.one-Writeups
+	-Chall1
+		-Readme.md
+		-Solve.py
+	-Chall2
+		-Readme.md
+		-Solve.py
+	...
 
 Each folder will usually contain a README.md(for explanations) and a solve.py/solve.cpp(then in this case there may be an executable fileP
 
