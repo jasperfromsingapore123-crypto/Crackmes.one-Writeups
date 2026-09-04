@@ -14,7 +14,7 @@ Crackmes.one-Writeups
 		-Solve.py
 	...
 ```
-Each folder will usually contain a README.md(for explanations) and a solve.py/solve.cpp(then in this case there may be an executable fileP
+Each folder will usually contain a README.md(for explanations) and a solve.py/solve.cpp(then in this case there may be an executable file
 
 Tools used:
 
