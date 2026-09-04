@@ -4,7 +4,7 @@ Accurate at the time this was written. 4 September 2026
 When we try to run the file just as ./chall, we realise that it returns a Segmentation Fault. Lets try running it under gdb(in my case I also have gef) :)
 
 Lets first run it... then check it out with info proc mappings
-
+```text
 gef➤  info proc mappings
 process 55979
 Mapped address spaces:
@@ -17,13 +17,13 @@ Start Addr         End Addr           Size               Offset             Perm
 0x00007ffffffdd000 0x00007ffffffff000 0x22000            0x0                rw-p  [stack] 
 0xffffffffff600000 0xffffffffff601000 0x1000             0x0                --xp  [vsyscall] 
 gef➤ 
-
+```
 So as we can see, the program's space is between 0x10000 and 0x11000
 
 lets analyse nearby instructions to see whats causing the seg fault
 
 First, lets run starti, to actually see the first instruction, then run x/24i $pc to see the nearby instructions. We get this:
-
+```text
 gef➤  x/24i $pc
 => 0x1007a:	push   rbp
    0x1007b:	mov    rbp,rsp
@@ -50,6 +50,7 @@ gef➤  x/24i $pc
    0x100d1:	add    BYTE PTR [rax],al
    0x100d3:	add    BYTE PTR [rax],al
 
+```
 We can see that the function ends with:
 
 0x100c6: leave
@@ -104,7 +105,7 @@ As we can see, 0x10030 and 0x10280 dereferences the position of flag.txt.
 Lets analyse them as well
 
 And hence, we have this:
-
+```text
 gef➤  x/32i 0x10030-0xc
    0x10024:	push   rbp
    0x10025:	mov    rbp,rsp
@@ -146,7 +147,7 @@ We see these instructions:
    0x10025:     mov    rbp,rsp
    0x10028:     sub    rsp,0x50
 These are function proluges, and hence, we can comfirm this is the function we want to reach. 
-
+```
 btw:
 push rbp
 → save the caller's old frame pointer
