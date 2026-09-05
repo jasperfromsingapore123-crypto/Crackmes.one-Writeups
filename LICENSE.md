@@ -1,6 +1,5 @@
 # Non-Commercial License
 
-Copyright (c) 2026 Jasper
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this repository and its contents, including source code, scripts, documentation, writeups, and other materials, to use, copy, modify, and redistribute them for any non-commercial purpose.
 
