@@ -33,4 +33,17 @@ These challenges are sourced from Crackmes.one
 Updates:
 There will be more challs as time goes by. I aim to upload one every day!!
 
-Thanks everyone
+Thanks everyone!
+
+
+## License
+
+Original writeups and documentation in this repository are licensed under
+CC BY-NC 4.0.
+
+You may share and adapt them for non-commercial purposes with attribution.
+
+Commercial use requires prior permission.
+
+Third-party challenge files remain subject to their original authors'
+terms and are not relicensed by this repository.
