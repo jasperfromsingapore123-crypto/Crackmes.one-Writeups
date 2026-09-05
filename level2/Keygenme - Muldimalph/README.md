@@ -68,10 +68,6 @@ However, do not worry. They are just literally just variable names, you can rena
 
 When we simplify everything, we can write out the solve script.
 
-
-
-I copied the entire decompiled validate_serial() (btw derived from the main function), because there are a lot of things to learn from this.
-
 Refer to solve.py for the solve script
 
 Written using GNU NANO
