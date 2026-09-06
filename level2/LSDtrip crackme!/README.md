@@ -43,7 +43,7 @@ Exactly how it works:
 
 ord(password[i])*counter 
 
-# Note: in this case its var_10.
+Note: in this case its var_10.
 
 ------------------------------------------------------------
 
