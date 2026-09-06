@@ -35,6 +35,7 @@ There will be more challs as time goes by. I aim to upload one every day!!
 
 Thanks everyone!
 
+The challenge source is also attached, if you wish to attempt the challenges yourself!
 
 ## License
 
