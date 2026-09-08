@@ -11,6 +11,7 @@ Solve:
 
 Lets first open it up in Binary Ninja and look at the main function
 
+```text
 140001d03    int main()
 
 140001d0b        __main()
@@ -48,11 +49,11 @@ Lets first open it up in Binary Ninja and look at the main function
 140001ef0        getchar()
 140001ef5        getchar()
 140001efa        return 0
-
+```
 This is the entry function, and basically, it takes in your serial key, then passes it through validate().
 Now lets take a look at it.
 
-
+```text
 140001c54    int validate(char const* serial)
 
 140001c85        uint32_t C
@@ -75,7 +76,7 @@ Now lets take a look at it.
 140001cf8            return 1
 140001cf8        
 140001cf1        return 0
-
+```
 
 Now, we are given 2(actually more than that but counting is bad aint it lol)  new functions here. 
 -Parse Blocks
