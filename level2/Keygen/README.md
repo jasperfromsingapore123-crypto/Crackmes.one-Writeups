@@ -71,7 +71,7 @@ Then, the value of var_c is returned.
 So, how do we derive at the final value of var_c?
 
 Well, we derive another value through another function. Then that value is added onto var_c, before incrementing var_10 by one.
-Hence, to put it in simple terms, var_c is just the sum of all the chars' ascii values from the index specified by arg2 to that specified by arg3.
+Hence, to put it in simple terms, var_c is just the sum of the numerical values of the digit characters processed by sub_4011c9().
 
 Now, lets reverse sub_4011c9()
 
@@ -84,7 +84,7 @@ Now, lets reverse sub_4011c9()
 004011de        return 0xffffffff
 ```
 
-Now, this is actually where I said we could learn lots of new stuff. You see, this is actually a bit of "pattern recognition", when you see arg1 - 0x30, chances are actually (in this kind of scenario), we are getting the ascii value of a character.
+Now, this is actually where I said we could learn lots of new stuff. You see, this is actually a bit of "pattern recognition", when you see arg1 - 0x30 in this context, it is usually converting an ASCII digit character into its numerical value.
 
 The above conditional just checks whether the character is within a range.
 
@@ -94,7 +94,7 @@ Alright, this is our last function, sub_401255(). I have attached the code above
 
 Here, there is first a conditional that checks the length of the input(must be 13 chars) and the 4th char( must be a dash ie. '-')
 
-Next, we see the variable rax_6. Basically, it takes the total sum of the ascii values of the input, from index 0 to index 3. If the value of rax_6 = 0xffffffff it immediately means it FAILED.
+Next, we see the variable rax_6. Basically, it takes the sum of the numerical values of the digits at indexes 0, 1, and 2.
 
 Then we see a variable called var_c_1 being initialised with the value of 4.
 
@@ -119,15 +119,17 @@ Finally, we see this big chunk
 
 We are given this large chunk, but let me help unpack it. 
 
-As prev. mentioned, sub_4011c9 turns ascii chars into their respective values. Then, we take the char at [(var_c_1-4-4)//3], then xor it with rax_6%3. If that result is not equal to rax_17, aka the sum of all the variables mentioned in sub_4011ee(), it means we FAILED. NOOOOOO
+As prev. mentioned, sub_4011c9 turns ascii chars into their respective numerical values. Then, we take the char at [(var_c_1_4-4)//3], then xor it with rax_6%3. If that result is not equal to rax_17%9, aka the sum of all the variables' digit values mentioned in sub_4011ee(), it means we FAILED. NOOOOOO
 
 Anyways, for easier reference, here is a pseudocode I wrote, I think this is actually a really challenging challenge. Time is really needed to digest this.
 
 ```text
+
+#Note I have renamed all my functions when I was solving this, for better readability.
 def func1(input,ARG2,ARG3):     #ARG2 = 0 and ARG3 = 3
     var = 0
     arg2 = ARG2
-    while arg2 <= ARG2+ARG3
+    while arg2 < ARG2+ARG3:
         result = func2(input[arg2])
         if result == 0xffffffff:
             return 0xffffffff
@@ -138,8 +140,8 @@ def func1(input,ARG2,ARG3):     #ARG2 = 0 and ARG3 = 3
     return var
 
 def func2(arg1):
-    if(arg1>0x2f and arg1<=0x39):
-            return arg1-0x30
+    if '0' <= arg1 <= '9':
+        return ord(arg1) - ord('0')
     return 0xffffffff
 
 def final(input):
