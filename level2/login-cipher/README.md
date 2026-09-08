@@ -81,7 +81,7 @@ Lets move on to the next lines.
 
 rax_12 points to the current character of data_404028. Then, data_404028 will be the next character.
 Finally, we return the value of the rax_12 - data_4040101%10 (note that 0xa is hex for the decimal value 10)
-WE ARE DONE IN UNDERSTANDING WHAT THIS FUNCTION IS ABOUT. WELL PLAYED.
+WE ARE DONE IN UNDERSTANDING WHAT THIS FUNCTION IS ABOUT.
 
 However, you may notice the condition if(arg1 !=0).
 This ensures that data_404028 is only initialised ONCE, and hence that explains why sub_4013e3() calls sub_401175() with the argument "0"
