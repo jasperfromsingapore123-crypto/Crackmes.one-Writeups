@@ -105,6 +105,7 @@ there is an obfuscated string "v`cav``|", xoring it with the key, 0x13 returns u
 We also have another string "rarqzpr", xoring it with 0x13 returns us arabica
 
 We have a very very goofy bunch:
+```text
 140001a68    uint32_t check2(uint32_t C)
 
 140001a8f        char var_35
@@ -126,7 +127,7 @@ We have a very very goofy bunch:
 140001b3b            			| zx.d(var_30.b) << 8 
 					| zx.d(var_31.b) 
 					| zx.d(var_2f.b) << 0x10 //0x10 = 16
-
+```
 dst: &var_35 just means that we shld start writing from that. However, since there are 8 chars, we will need 8 vars, which perfectly maps to var_2e
 
 //pseudocode only.
@@ -136,7 +137,7 @@ second_part = word[4]|word[5]<<8|word[6]<<16|word[7]<<24
 var_14_2 = C^first_part^second_part
 
 lets look at the second very goofy part
-
+```text
 140001b5a        deobf(src: "rarqzpr", len: 7, key: 0x13, dst: &var_3d)
 140001b63        char* var_28 = &var_3d
 140001bc5        var_3c
@@ -144,7 +145,7 @@ lets look at the second very goofy part
 140001bc5        var_3a
 140001bc5        return (var_14_2 ^ (zx.d(var_3a.b) << 0x18 | zx.d(var_3c.b) << 8 | zx.d(var_3d)
 140001bc5            | zx.d(var_3b.b) << 0x10)) == 0xcafebabe
-
+```
 
 It takes "arab" and puts them into var_3d, var_c3, var_3b and var_3a
 
