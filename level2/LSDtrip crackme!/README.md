@@ -7,7 +7,7 @@ Information is accurate as per 4 September 2026
 Alright.. lets open up our file in a decompiler. For me, the main() function is sub_401000()
 
 We are given:
-
+```text
 00401000    void sub_401000() __noreturn
 
 00401010        printf(_Format: "\n     "LSDtrip"" crackme by Alon Alush, alonalush5@gmail.com       "
@@ -29,7 +29,7 @@ We are given:
 004010d9        _getch()
 004010e4        exit(_Except: 0)
 004010e4        noreturn
-
+```
 Ok. So the way we understand this is:
 
 We are given 2 integers, var_c and var_10.
