@@ -9,7 +9,7 @@ First, lets open up our binary both in Binary Ninja and a debugger, and in my ca
 
 Lets immediately head to the main function and look for any signs of comparing our input to the target. Apparently, we see a memcmp, and lets set a breakpoint there for analysis.
 
-<img src = "/home/jasper/Crackmes.one-Writeups/images/Pasted image.png">
+<img src="../../images/Pasted image.png">
 
 Now, we need to set a breakpoint. But where? Under Binary Ninja, memcmp is at 14000229e. 
 At a typical executable, the preferred image base is 0x140000000. Hence, at x64dbg, we go to crackmes.one+229e (crackmes.one is the name of the chall file, it may differ)
@@ -36,7 +36,7 @@ well, its 0x16(hex) long.
 
 Hence, we just input a 22 char password, the we can derive the password.
 
-<img src = "/home/jasper/Crackmes.one-Writeups/images/Pasted image (2).png">
+<img src="../../images/Pasted image (2).png">
 
 I know, this is just one method and I promised 2. Hence, let me elaborate on how to analyse this statically.
 
