@@ -1,8 +1,8 @@
 # License
 
 Except where otherwise noted, the original writeups, explanations,
-documentation, diagrams, and other written material created by the
-repository owner are licensed under the:
+scripts, documentation, diagrams, and other written material created 
+by the repository owner are licensed under the:
 
 Creative Commons Attribution-NonCommercial 4.0 International License
 (CC BY-NC 4.0)
