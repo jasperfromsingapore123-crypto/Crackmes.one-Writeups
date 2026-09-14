@@ -67,7 +67,7 @@ It seems taht _99adb5ad_c9d1_44ff_84ce_b52782ac7aeb() is the function verifying 
 
 By the way, for your reference, here is a main renamed function I created.
 
-![Screenshot](images/Pasted%20image%20(3).png)
+![Screenshot](images/Pasted%20image%20%283%29.png)
 
 Anyways, lets go reverse the function we have identified.
 
