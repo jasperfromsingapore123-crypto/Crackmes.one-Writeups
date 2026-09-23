@@ -16,7 +16,7 @@ Solve scripts are licensed separately under the **MIT License**.
 Full MIT License terms:
 https://opensource.org/license/mit
 
-For the purposes of this repository, the term **"solve script"** refers strictly to a file whose filename contains the standalone word **"script"** at the time that file is downloaded or obtained from this repository.
+For the purposes of this repository, the term **"solve script"** refers strictly to a file whose filename contains the standalone word **"solve"**, such as **solve**.py, etc at the time that file is downloaded or obtained from this repository.
 
 Only files satisfying this definition are licensed under the MIT License.
 
