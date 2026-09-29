@@ -31,7 +31,7 @@ Platform:
 These challenges are sourced from Crackmes.one
 
 Updates:
-There will be more challs as time goes by. I aim to upload one every day!!
+There will be more challs as time goes by.
 
 Thanks everyone!
 
